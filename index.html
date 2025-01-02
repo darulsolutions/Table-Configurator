@@ -1,0 +1,2444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Configurator</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="iframe-container">
+            <iframe id="playcanvasApp" src="https://playcanv.as/e/p/jhi6VGXN/" frameborder="0" width="100%"
+                height="100%"></iframe>
+        </div>
+        <div class="toggleFullScreenBtns">
+            <div id="fullScreen">
+                <img src="asset/icons/right.png" alt="">
+            </div>
+            <div id="exitFullScreen">
+                <img src="asset/icons/left.png" alt="">
+            </div>
+        </div>
+        <div class="configuration-container">
+            <p style="text-transform: uppercase">Design your table</p>
+            <div class="accordion accordion-section" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Step 1 / 5 Shape
+                        </button>
+                    </h2>
+                    <div class="accordion-selection">
+                        <p class="item-selected">
+                            Selected:
+                            <span class="selected" id="shape-selected"><b>Rectangle</b></span>
+                            <span id="type-selected"></span>
+                        </p>
+                        <p class="price" id="shape-price"><b>€15000</b></p>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="paragraph">
+                                For more information about table top shapes , please read or
+                                visit one of our home furnishing stores. Are you looking for a
+                                different size? Please contact us.
+                            </p>
+                            <h3 class="inside-headings">Form</h3>
+                            <div class="config-box" id="shapes-box">
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape1.jpg" alt="" />
+                                    <p>Rectangle</p>
+                                    <div class="hover-box active"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape2.jpg" alt="" />
+                                    <p>Oval</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape3.jpg" alt="" />
+                                    <p>Pebble</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape4.jpg" alt="" />
+                                    <p>Around</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape5.jpg" alt="" />
+                                    <p>Danish Oval</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape6.jpg" alt="" />
+                                    <p>Half Oval</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape7.jpg" alt="" />
+                                    <p>Semicircle</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape8.jpg" alt="" />
+                                    <p>Table du Sud x <br /> Studio Verbaan I</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape9.jpg" alt="" />
+                                    <p>Table du Sud x <br />Studio Verbaan II</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape10.jpg" alt="" />
+                                    <p>Abu</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape11.jpg" alt="" />
+                                    <p>Dollop</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape12.jpg" alt="" />
+                                    <p>Leaf</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/shapes-images/shape13.jpg" alt="" />
+                                    <p>Olmo</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                            </div>
+                            <div class="types" id="shape-types">
+                                <h3 class="inside-headings" style="border-top: 1px solid rgb(228, 228, 228)">
+                                    Types
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Step 2 / 5 Material
+                        </button>
+                    </h2>
+                    <div class="accordion-selection">
+                        <p class="item-selected">
+                            Selected:
+                            <span class="selected" id="material-selected"><b>Oak Wood</b></span>
+                            <span id="table-finish-selected"></span>
+                            <span id="table-color-selected"></span>
+                        </p>
+                        <p class="price" id="material-price"><b>€0</b></p>
+                    </div>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="paragraph">
+                                For more information about table top shapes , please read or
+                                visit one of our home furnishing stores. Are you looking for a
+                                different size? Please contact us.
+                            </p>
+                            <h3 class="inside-headings">Material</h3>
+                            <div class="config-box" id="material-box">
+                                <div class="config-items">
+                                    <img src="asset/images/material-images/material1.jpg" alt="" />
+                                    <p>Oak Wood</p>
+                                    <div class="hover-box active"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/material-images/material2.jpg" alt="" />
+                                    <p>Ceramics</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/material-images/material3.jpg" alt="" />
+                                    <p>Pheonix</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/material-images/material4.jpg" alt="" />
+                                    <p>Nuts</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/material-images/material5.jpg" alt="" />
+                                    <p>Concrete</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/material-images/material6.jpg" alt="" />
+                                    <p>Iroko garden tables</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                            </div>
+
+                            <div id="material-finish">
+                                <div class="types" id="finish-types">
+                                    <h3 class="inside-headings" style="border-top: 1px solid rgb(228, 228, 228)">
+                                        Table top finish
+                                    </h3>
+                                </div>
+
+                                <div class="table-finish config-box" id="oak-wood-finish">
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1finish/material1.1.jpg"
+                                            alt="" />
+                                        <p>New Oak</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1finish/material1.2.jpg"
+                                            alt="" />
+                                        <p>Lived Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1finish/material1.3.jpg"
+                                            alt="" />
+                                        <p>Refined Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                                <div class="table-finish config-box" id="pheonix-finish" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material3finish/material3.1.jpg"
+                                            alt="" />
+                                        <p>
+                                            Ultra matt <br />
+                                            lacquer
+                                        </p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material3finish/material3.2.jpg"
+                                            alt="" />
+                                        <p>Winter</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material3finish/material3.3.jpg"
+                                            alt="" />
+                                        <p>Silk white</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="material-colors">
+                                <div class="types" id="color-types">
+                                    <h3 class="inside-headings" style="border-top: 1px solid rgb(228, 228, 228)">
+                                        Table top colors
+                                    </h3>
+                                </div>
+
+                                <div class="table-colors config-box" id="oak-wood-colors">
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.1.jpg"
+                                            alt="" />
+                                        <p>
+                                            Ultra matt <br />
+                                            lacquer
+                                        </p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.2.jpg"
+                                            alt="" />
+                                        <p>Winter</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.3.jpg"
+                                            alt="" />
+                                        <p>Silk white</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.4.jpg"
+                                            alt="" />
+                                        <p>Terracotta</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.5.jpg"
+                                            alt="" />
+                                        <p>Walnut</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.6.jpg"
+                                            alt="" />
+                                        <p>Pebblestone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.7.jpg"
+                                            alt="" />
+                                        <p>Mud</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.8.jpg"
+                                            alt="" />
+                                        <p>
+                                            Black smoke <br />
+                                            intense
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.9.jpg"
+                                            alt="" />
+                                        <p>
+                                            Black smoke <br />
+                                            light
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.10.jpg"
+                                            alt="" />
+                                        <p>Maronne</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material1colors/material1.11.jpg"
+                                            alt="" />
+                                        <p>
+                                            Deep black <br />
+                                            (9005)
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                                <div class="table-colors config-box" id="ceramics-colors" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.1.jpg"
+                                            alt="" />
+                                        <p>
+                                            Silver Root <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.2.jpg"
+                                            alt="" />
+                                        <p>Travertino</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.3.jpg"
+                                            alt="" />
+                                        <p>
+                                            Bahia black <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.4.jpg"
+                                            alt="" />
+                                        <p>
+                                            Taj Mahal <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.5.jpg"
+                                            alt="" />
+                                        <p>
+                                            Calcatta <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.6.jpg"
+                                            alt="" />
+                                        <p>
+                                            Elegant Black <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.7.jpg"
+                                            alt="" />
+                                        <p>
+                                            Elegant Black <br />
+                                            Lux
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.8.jpg"
+                                            alt="" />
+                                        <p>
+                                            Golden White <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.9.jpg"
+                                            alt="" />
+                                        <p>
+                                            Golden White <br />
+                                            Lux
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.10.jpg"
+                                            alt="" />
+                                        <p>
+                                            Imperial <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.11.jpg"
+                                            alt="" />
+                                        <p>
+                                            Limestone Sand <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.12.jpg"
+                                            alt="" />
+                                        <p>
+                                            Quarzo Bluegrey <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.13.jpg"
+                                            alt="" />
+                                        <p>
+                                            Quarzo Bluegrey <br />
+                                            Lux
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.14.jpg"
+                                            alt="" />
+                                        <p>
+                                            Saint Lauren <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.15.jpg"
+                                            alt="" />
+                                        <p>
+                                            Saint Laurent <br />
+                                            Lux
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.16.jpg"
+                                            alt="" />
+                                        <p>
+                                            Statuario <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.17.jpg"
+                                            alt="" />
+                                        <p>
+                                            Green Borgogna <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.18.jpg"
+                                            alt="" />
+                                        <p>
+                                            Verde Borgogna <br />
+                                            Lux
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.19.jpg"
+                                            alt="" />
+                                        <p>
+                                            Heart of Gre <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.20.jpg"
+                                            alt="" />
+                                        <p>
+                                            Concrete Look <br />
+                                            Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material2colors/material2.21.jpg"
+                                            alt="" />
+                                        <p>
+                                            Grey Du <br />
+                                            Gent Satin
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                                <div class="table-colors config-box" id="pheonix-colors" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material3colors/material3.1.jpg"
+                                            alt="" />
+                                        <p>Nero Ingo</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                </div>
+                                <div class="table-colors config-box" id="nuts-colors" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material4colors/material4.1.jpg"
+                                            alt="" />
+                                        <p>Brown</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material4colors/material4.2.jpg"
+                                            alt="" />
+                                        <p>Ultra matte lak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                                <div class="table-colors config-box" id="concrete-colors" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material5colors/material5.1.jpg"
+                                            alt="" />
+                                        <p>Basalt</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material5colors/material5.2.jpg"
+                                            alt="" />
+                                        <p>Grint</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material5colors/material5.3.jpg"
+                                            alt="" />
+                                        <p>Leisteen</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material5colors/material5.4.jpg"
+                                            alt="" />
+                                        <p>Modder</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material5colors/material5.5.jpg"
+                                            alt="" />
+                                        <p>Wit</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/material-images/material5colors/material5.6.jpg"
+                                            alt="" />
+                                        <p>Zand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Step 3 / 5 Size
+                        </button>
+                    </h2>
+                    <div class="accordion-selection">
+                        <p class="item-selected">
+                            Selected: <span id="size-selected"></span><span id="length-selected"></span><span
+                                id="width-selected"></span><span id="height-selected"></span><span
+                                id="blade-thickness-selected"></span>
+                        </p>
+                        <p class="price"></p>
+                    </div>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="size-section">
+                                <h3 class="inside-headings">Size</h3>
+                                <div class="config-box" id="dimension-size"></div>
+                            </div>
+
+                            <div id="length-section">
+                                <h3 class="inside-headings">Length</h3>
+                                <div class="config-box" id="dimension-length"></div>
+                            </div>
+
+                            <div id="width-section">
+                                <h3 class="inside-headings">Width</h3>
+                                <div class="config-box" id="dimension-width"></div>
+                            </div>
+
+                            <div id="height-section">
+                                <h3 class="inside-headings">Height</h3>
+                                <div class="config-box" id="dimension-height"></div>
+                            </div>
+
+                            <div id="blade-thickness-section">
+                                <h3 class="inside-headings">Blade Thickness</h3>
+                                <div class="config-box" id="dimension-blade-thickness"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            Step 4 / 5 Base
+                        </button>
+                    </h2>
+                    <div class="accordion-selection">
+                        <p class="item-selected">
+                            Selected: <span id="base-selected"><b>Aaron</b></span>
+                            <span id="powder-coating-selected"></span>
+                            <span id="legs-position-selected"></span>
+                            <span id="pauline-wingelaar-selected"></span>
+                        </p>
+                        <p class="price"></p>
+                    </div>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h3 class="inside-headings">Chasis</h3>
+                            <div id="base-box">
+                                <div class="config-box" id="rectangle-base">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis2.jpg" alt="" />
+                                        <p>Table du Sud x <br>Anne Claus</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis38.jpg" alt="" />
+                                        <p>Bonqui</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis4.jpg" alt="" />
+                                        <p>Camilla</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis39.jpg" alt="" />
+                                        <p>Square</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis5.jpg" alt="" />
+                                        <p>Case</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis11.jpg" alt="" />
+                                        <p>Cruz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis14.jpg" alt="" />
+                                        <p>Eminent</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis17.jpg" alt="" />
+                                        <p>Felix</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis18.jpg" alt="" />
+                                        <p>Ferdinand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis22.jpg" alt="" />
+                                        <p>Louise</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis24.jpg" alt="" />
+                                        <p>Mads</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis25.jpg" alt="" />
+                                        <p>Marly</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis26.jpg" alt="" />
+                                        <p>Meryl</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis40.jpg" alt="" />
+                                        <p>Miles</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis29.jpg" alt="" />
+                                        <p>Pom</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis32.jpg" alt="" />
+                                        <p>Quinn</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis33.jpg" alt="" />
+                                        <p>Saar</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis41.jpg" alt="" />
+                                        <p>Taps</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="oval-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis2.jpg" alt="" />
+                                        <p>Table du Sud x <br> Anne Claus</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis3.jpg" alt="" />
+                                        <p>Table du Sud x <br> Art In Return</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis4.jpg" alt="" />
+                                        <p>Camilla</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis5.jpg" alt="" />
+                                        <p>Case</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis6.jpg" alt="" />
+                                        <p>Cassi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis7.jpg" alt="" />
+                                        <p>Cavalier</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis8.jpg" alt="" />
+                                        <p>Clairz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis9.jpg" alt="" />
+                                        <p>Chloe</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis10.jpg" alt="" />
+                                        <p>Coco</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis11.jpg" alt="" />
+                                        <p>Cruz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis12.jpg" alt="" />
+                                        <p>Dida</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis13.jpg" alt="" />
+                                        <p>Duo Cylinder</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis14.jpg" alt="" />
+                                        <p>Eminent</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis17.jpg" alt="" />
+                                        <p>Felix</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis18.jpg" alt="" />
+                                        <p>Ferdinand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis19.jpg" alt="" />
+                                        <p>Philippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis22.jpg" alt="" />
+                                        <p>Louise</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis24.jpg" alt="" />
+                                        <p>Mads</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis25.jpg" alt="" />
+                                        <p>Marly</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis26.jpg" alt="" />
+                                        <p>Meryl</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis27.jpg" alt="" />
+                                        <p>Oval O-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis29.jpg" alt="" />
+                                        <p>Pom</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis30.jpg" alt="" />
+                                        <p>Qone Duo</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis31.jpg" alt="" />
+                                        <p>Qone Duo Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis32.jpg" alt="" />
+                                        <p>Quinn</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis33.jpg" alt="" />
+                                        <p>Saar</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>Table du Sud x <br> Studio Verbaan</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="pebble-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis42.jpg" alt="" />
+                                        <p>Egu</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis43.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis44.jpg" alt="" />
+                                        <p>Liv</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis45.jpg" alt="" />
+                                        <p>Ozu</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis46.jpg" alt="" />
+                                        <p>Pippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis47.jpg" alt="" />
+                                        <p>Pom</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="around-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis48.jpg" alt="" />
+                                        <p>Arlette</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis49.jpg" alt="" />
+                                        <p>Caprice</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis50.jpg" alt="" />
+                                        <p>Celso</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis51.jpg" alt="" />
+                                        <p>Chaneau</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis52.jpg" alt="" />
+                                        <p>Einaudi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis53.jpg" alt="" />
+                                        <p>Feye</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis54.jpg" alt="" />
+                                        <p>Nina</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis45.jpg" alt="" />
+                                        <p>Ozu</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis46.jpg" alt="" />
+                                        <p>Pippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis55.jpg" alt="" />
+                                        <p>
+                                            Pizou 16 <br />
+                                            graden
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis56.jpg" alt="" />
+                                        <p>Qone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis56.jpg" alt="" />
+                                        <p>Qone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis57.jpg" alt="" />
+                                        <p>Quattro</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis58.jpg" alt="" />
+                                        <p>Round O-leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis59.jpg" alt="" />
+                                        <p>Savie</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis60.jpg" alt="" />
+                                        <p>Vazy</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis61.jpg" alt="" />
+                                        <p>Xavier</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="danish-oval-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis3.jpg" alt="" />
+                                        <p>
+                                            Table du Sud x <br />
+                                            Art In Return
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis4.jpg" alt="" />
+                                        <p>Camilla</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis5.jpg" alt="" />
+                                        <p>Case</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis6.jpg" alt="" />
+                                        <p>Cassi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis7.jpg" alt="" />
+                                        <p>Cavalier</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis8.jpg" alt="" />
+                                        <p>Clairz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis9.jpg" alt="" />
+                                        <p>Chloe</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis10.jpg" alt="" />
+                                        <p>Coco</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis11.jpg" alt="" />
+                                        <p>Cruz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis12.jpg" alt="" />
+                                        <p>Dida</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis13.jpg" alt="" />
+                                        <p>Duo Cylinder</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis14.jpg" alt="" />
+                                        <p>Eminent</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis17.jpg" alt="" />
+                                        <p>Felix</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis18.jpg" alt="" />
+                                        <p>Ferdinand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis19.jpg" alt="" />
+                                        <p>Philippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis22.jpg" alt="" />
+                                        <p>Louise</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis24.jpg" alt="" />
+                                        <p>Mads</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis25.jpg" alt="" />
+                                        <p>Marly</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis26.jpg" alt="" />
+                                        <p>Meryl</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis27.jpg" alt="" />
+                                        <p>Oval O-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis29.jpg" alt="" />
+                                        <p>Pom</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis30.jpg" alt="" />
+                                        <p>Qone Duo</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis31.jpg" alt="" />
+                                        <p>Qone Duo Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis32.jpg" alt="" />
+                                        <p>Quinn</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis33.jpg" alt="" />
+                                        <p>Saar</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>
+                                            Table du Sud x <br />
+                                            Studio Verbaan
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="half-oval-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis4.jpg" alt="" />
+                                        <p>Camilla</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis5.jpg" alt="" />
+                                        <p>Case</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis6.jpg" alt="" />
+                                        <p>Cassi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis8.jpg" alt="" />
+                                        <p>Clairz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis9.jpg" alt="" />
+                                        <p>Chloe</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis10.jpg" alt="" />
+                                        <p>Coco</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis11.jpg" alt="" />
+                                        <p>Cruz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis12.jpg" alt="" />
+                                        <p>Dida</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis13.jpg" alt="" />
+                                        <p>Duo Cylinder</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis14.jpg" alt="" />
+                                        <p>Eminent</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis17.jpg" alt="" />
+                                        <p>Felix</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis18.jpg" alt="" />
+                                        <p>Ferdinand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis19.jpg" alt="" />
+                                        <p>Philippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis22.jpg" alt="" />
+                                        <p>Louise</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis24.jpg" alt="" />
+                                        <p>Mads</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis25.jpg" alt="" />
+                                        <p>Marly</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis26.jpg" alt="" />
+                                        <p>Meryl</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis62.jpg" alt="" />
+                                        <p>Miles</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis27.jpg" alt="" />
+                                        <p>Oval O-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis29.jpg" alt="" />
+                                        <p>Pom</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis30.jpg" alt="" />
+                                        <p>Qone Duo</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis31.jpg" alt="" />
+                                        <p>Qone Duo Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis32.jpg" alt="" />
+                                        <p>Quinn</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis33.jpg" alt="" />
+                                        <p>Saar</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>Table du Sud x <br> Studio Verbaan</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="semicircle-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis4.jpg" alt="" />
+                                        <p>Camilla</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis5.jpg" alt="" />
+                                        <p>Case</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis6.jpg" alt="" />
+                                        <p>Cassi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis8.jpg" alt="" />
+                                        <p>Clairz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis9.jpg" alt="" />
+                                        <p>Chloe</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis10.jpg" alt="" />
+                                        <p>Coco</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis11.jpg" alt="" />
+                                        <p>Cruz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis12.jpg" alt="" />
+                                        <p>Dida</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis13.jpg" alt="" />
+                                        <p>Duo Cylinder</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis14.jpg" alt="" />
+                                        <p>Eminent</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis17.jpg" alt="" />
+                                        <p>Felix</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis18.jpg" alt="" />
+                                        <p>Ferdinand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis19.jpg" alt="" />
+                                        <p>Philippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis22.jpg" alt="" />
+                                        <p>Louise</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis24.jpg" alt="" />
+                                        <p>Mads</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis25.jpg" alt="" />
+                                        <p>Marly</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis26.jpg" alt="" />
+                                        <p>Meryl</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis62.jpg" alt="" />
+                                        <p>Miles</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis27.jpg" alt="" />
+                                        <p>Oval O-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis29.jpg" alt="" />
+                                        <p>Pom</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis30.jpg" alt="" />
+                                        <p>Qone Duo</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis31.jpg" alt="" />
+                                        <p>Qone Duo Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis32.jpg" alt="" />
+                                        <p>Quinn</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis33.jpg" alt="" />
+                                        <p>Saar</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>
+                                            Table du Sud x <br />
+                                            Studio Verbaan
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="table-du-sud-x-studio-verbaan-i-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>
+                                            Table du Sud x <br />
+                                            Studio Verbaan
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="table-du-sud-x-studio-verbaan-ii-base"
+                                    style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>
+                                            Table du Sud x <br />
+                                            Studio Verbaan
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="abu-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis8.jpg" alt="" />
+                                        <p>Clairz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis9.jpg" alt="" />
+                                        <p>Chloe</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis10.jpg" alt="" />
+                                        <p>Coco</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis13.jpg" alt="" />
+                                        <p>Duo Cylinder</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis19.jpg" alt="" />
+                                        <p>Philippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis27.jpg" alt="" />
+                                        <p>Oval O-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis30.jpg" alt="" />
+                                        <p>Qone Duo</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis31.jpg" alt="" />
+                                        <p>Qone Duo Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>Table du Sud x <br> Studio Verbaan</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="dollop-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis5.jpg" alt="" />
+                                        <p>Case</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis6.jpg" alt="" />
+                                        <p>Cassi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis9.jpg" alt="" />
+                                        <p>Chloe</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis10.jpg" alt="" />
+                                        <p>Coco</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis13.jpg" alt="" />
+                                        <p>Duo Cylinder</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis19.jpg" alt="" />
+                                        <p>Philippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis27.jpg" alt="" />
+                                        <p>Oval O-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis30.jpg" alt="" />
+                                        <p>Qone Duo</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis31.jpg" alt="" />
+                                        <p>Qone Duo Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis33.jpg" alt="" />
+                                        <p>Saar</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>Table du Sud x <br> Studio Verbaan</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="leaf-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis1.jpg" alt="" />
+                                        <p>Aaron</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis2.jpg" alt="" />
+                                        <p>Table du Sud x <br> Anne Claus</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis3.jpg" alt="" />
+                                        <p>Table du Sud x <br> Art In Return</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis4.jpg" alt="" />
+                                        <p>Camilla</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis5.jpg" alt="" />
+                                        <p>Case</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis6.jpg" alt="" />
+                                        <p>Cassi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis8.jpg" alt="" />
+                                        <p>Clairz</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis9.jpg" alt="" />
+                                        <p>Chloe</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis10.jpg" alt="" />
+                                        <p>Coco</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis12.jpg" alt="" />
+                                        <p>Dida</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis15.jpg" alt="" />
+                                        <p>Eqone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis16.jpg" alt="" />
+                                        <p>Eqone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis17.jpg" alt="" />
+                                        <p>Felix</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis18.jpg" alt="" />
+                                        <p>Ferdinand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis19.jpg" alt="" />
+                                        <p>Philippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis20.jpg" alt="" />
+                                        <p>Gap</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis21.jpg" alt="" />
+                                        <p>Laughing</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis22.jpg" alt="" />
+                                        <p>Louise</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis23.jpg" alt="" />
+                                        <p>Ludovic</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis24.jpg" alt="" />
+                                        <p>Mads</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis27.jpg" alt="" />
+                                        <p>Oval O-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis28.jpg" alt="" />
+                                        <p>Pip</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis29.jpg" alt="" />
+                                        <p>Pom</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis30.jpg" alt="" />
+                                        <p>Qone Duo</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis31.jpg" alt="" />
+                                        <p>Qone Duo Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis32.jpg" alt="" />
+                                        <p>Quinn</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis33.jpg" alt="" />
+                                        <p>Saar</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis34.jpg" alt="" />
+                                        <p>Table du Sud x <br> Studio Verbaan</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis35.jpg" alt="" />
+                                        <p>W-Leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis36.jpg" alt="" />
+                                        <p>XX10x4</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+
+                                <div class="config-box" id="olmo-base" style="display: none">
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis48.jpg" alt="" />
+                                        <p>Arlette</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis49.jpg" alt="" />
+                                        <p>Caprice</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis50.jpg" alt="" />
+                                        <p>Celso</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis51.jpg" alt="" />
+                                        <p>Chaneau</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis52.jpg" alt="" />
+                                        <p>Einaudi</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis53.jpg" alt="" />
+                                        <p>Feye</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis54.jpg" alt="" />
+                                        <p>Nina</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis45.jpg" alt="" />
+                                        <p>Ozu</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis46.jpg" alt="" />
+                                        <p>Pippa</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis55.jpg" alt="" />
+                                        <p>
+                                            Pizou 16 <br />
+                                            graden
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis56.jpg" alt="" />
+                                        <p>Qone</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis56.jpg" alt="" />
+                                        <p>Qone Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis57.jpg" alt="" />
+                                        <p>Quattro</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis58.jpg" alt="" />
+                                        <p>Round O-leg</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis59.jpg" alt="" />
+                                        <p>Savie</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis60.jpg" alt="" />
+                                        <p>Vazy</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis61.jpg" alt="" />
+                                        <p>Xavier</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/chasis-images/chasis37.jpg" alt="" />
+                                        <p>XX11x11 Oak</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="legs-position-box" style="display: none;">
+                                <h3 class="inside-headings">Position of the table legs</h3>
+                                <div class="config-box">
+                                    <div class="config-items">
+                                        <img src="asset/images/leg-position-images/position1.webp" alt="" />
+                                        <p>10cm</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/leg-position-images/position2.webp" alt="" />
+                                        <p>20cm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/leg-position-images/position3.webp" alt="" />
+                                        <p>30cm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/leg-position-images/position4.webp" alt="" />
+                                        <p>40cm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/leg-position-images/position5.webp" alt="" />
+                                        <p>50cm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/leg-position-images/position6.webp" alt="" />
+                                        <p>60cm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/leg-position-images/position7.webp" alt="" />
+                                        <p>75cm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="powder-coating-box">
+                                <h3 class="inside-headings">Powder Coating</h3>
+                                <div class="config-box powder-coating">
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder1.jpg" alt="" />
+                                        <p>Cloudy sand <br> (RAL 1019)</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder2.jpg" alt="" />
+                                        <p>Black powder <br> coated <br> (RAL 9005)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder3.jpg" alt="" />
+                                        <p>White powder <br> coated <br> (RAL 9010)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder4.jpg" alt="" />
+                                        <p>Brass gold</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder5.jpg" alt="" />
+                                        <p>Anodic brown</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder6.jpg" alt="" />
+                                        <p>Urban stone <br> (RAL 7023)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder7.jpg" alt="" />
+                                        <p>Cocoa dusk <br> (RAL 8017)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder8.jpg" alt="" />
+                                        <p>Silk mist <br> (RAL 7044)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder9.jpg" alt="" />
+                                        <p>Mossy brown <br> (RAL 8008)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder10.jpg" alt="" />
+                                        <p>Caramel rust <br> (RAL 8015)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/powder-coating-images/powder11.jpg" alt="" />
+                                        <p>Pearl ash <br> (RAL 1035)</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="pauline-wingelaar-colours-box" style="display: none;">
+                                <h3 class="inside-headings">Pauline Wingelaar Colors</h3>
+                                <div class="config-box">
+                                    <div class="config-items">
+                                        <img src="asset/images/pauline-wingelaar-colors/pauline1.jpg" alt="" />
+                                        <p>No extra <br> color</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/pauline-wingelaar-colors/pauline2.jpg" alt="" />
+                                        <p>Beige</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/pauline-wingelaar-colors/pauline3.jpg" alt="" />
+                                        <p>Black</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/pauline-wingelaar-colors/pauline4.jpg" alt="" />
+                                        <p>Dark brown</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/pauline-wingelaar-colors/pauline5.jpg" alt="" />
+                                        <p>Light brown</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/pauline-wingelaar-colors/pauline6.jpg" alt="" />
+                                        <p>Sand</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            Step 5 / 5 Finishing
+                        </button>
+                    </h2>
+                    <div class="accordion-selection">
+                        <p class="item-selected">Selected: <span id="edge-finishing-selected"><b>Standard
+                                </b></span><span id="corner-finishing-selected"><b>x No radius </b></span><span
+                                id="brush-selected"><b>x Unbrushed</b></span></p>
+                        <p class="price">100 Rs</p>
+                    </div>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="paragraph">
+                                For more information about table top shapes , please read or
+                                visit one of our home furnishing stores. Are you looking for a
+                                different size? Please contact us.
+                            </p>
+
+                            <h3 class="inside-headings">Edge Finishing</h3>
+                            <div class="config-box" id="edge-finishing">
+                                <div class="config-items">
+                                    <img src="asset/images/finishing-images/finishing-section1/finishing1.jpg" alt="" />
+                                    <p>Standard</p>
+                                    <div class="hover-box active"></div>
+                                </div>
+                                <div class="config-items" style="display: none">
+                                    <img src="asset/images/finishing-images/finishing-section2/finishing1.jpg" alt="" />
+                                    <p>Standard</p>
+                                    <div class="hover-box active"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/finishing-images/finishing-section1/finishing2.jpg" alt="" />
+                                    <p>Facet 12mm 60 <br />degrees</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/finishing-images/finishing-section1/finishing3.jpg" alt="" />
+                                    <p>20 degrees</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/finishing-images/finishing-section1/finishing4.jpg" alt="" />
+                                    <p>20 degrees inverted</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/finishing-images/finishing-section1/finishing5.jpg" alt="" />
+                                    <p>Ball</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/finishing-images/finishing-section1/finishing6.jpg" alt="" />
+                                    <p>Tree trunk edge</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                                <div class="config-items">
+                                    <img src="asset/images/finishing-images/finishing-section1/finishing7.jpg" alt="" />
+                                    <p>Bow</p>
+                                    <div class="hover-box"></div>
+                                </div>
+                            </div>
+
+                            <div id="corner-finishing">
+                                <h3 class="inside-headings" style="border-top: 1px solid rgb(228, 228, 228)">
+                                    Corner Finishing
+                                </h3>
+                                <div class="config-box">
+                                    <div class="config-items">
+                                        <img src="asset/images/finishing-images/corner-finish-images/corner1.jpg"
+                                            alt="" />
+                                        <p>No radius</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/finishing-images/corner-finish-images/corner2.jpg"
+                                            alt="" />
+                                        <p>35mm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/finishing-images/corner-finish-images/corner3.jpg"
+                                            alt="" />
+                                        <p>100mm</p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="brush">
+                                <h3 class="inside-headings" style="border-top: 1px solid rgb(228, 228, 228)">
+                                    Brushing
+                                </h3>
+                                <div class="config-box">
+                                    <div class="config-items">
+                                        <img src="asset/images/finishing-brush-images/brush1.jpg" alt="" />
+                                        <p>Unbrushed</p>
+                                        <div class="hover-box active"></div>
+                                    </div>
+                                    <div class="config-items">
+                                        <img src="asset/images/finishing-brush-images/brush2.jpg" alt="" />
+                                        <p>Brushed <br>(recommended)
+                                        </p>
+                                        <div class="hover-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-box">
+                <div class="subtotal">
+                    <p>Subtotal (Configuration)</p>
+                    <p>$0.00</p>
+                </div>
+                <div class="deposit">
+                    <p>10% deposit, to be paid by you</p>
+                    <p>$0.00</p>
+                </div>
+
+                <div id="collapseSix">
+                    <div class="remaining">
+                        <p>The remaining amount must be paid 1 day before delivery</p>
+                        <p>$0.00</p>
+                    </div>
+                    <div class="delivery-time">
+                        <p>Delivery Time: 7 weeks</p>
+                    </div>
+                    <div class="grandtotal">                      
+                        <p>$0.00</p>
+                    </div>
+                </div>
+
+                <div class="submit-configuration">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <button class="accordion-button info" id="infoAccordion" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne">
+                                    Less info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-buttons">
+                        <button id="save-design">Save your design</button>
+                        <button id="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

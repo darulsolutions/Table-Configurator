@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chango&family=Electrolize&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+:root {
+    --theme-color: #e5b761;
+    --secondary-color: rgb(228, 228, 228);
+    --theme-font: "Be Vietnam Pro", serif;
+}
+
+* {
+    font-family: var(--theme-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 65% auto;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.iframe-container {
+    height: 100%;
+    position: relative;
+}
+
+.configuration-container {
+    height: 100vh;
+    padding: 7% 5%;
+    opacity: 1;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mainHdng {
+    text-transform: uppercase;
+    padding-left: 15px;
+}
+.accordion-section {
+    max-height: 800px;
+    height: 100%;
+    overflow-y: auto;
+    /* height: 90vh; */
+    transition: max-height 0.3s ease;
+}
+
+.accordion {
+    flex-grow: 1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.accordion::-webkit-scrollbar {
+    display: none;
+}
+
+.configuration-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.accordion-button::after {
+    background-image: url('../asset/icons/down-arrow.png') !important;
+    background-size: 0.7rem !important;
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-item {
+    border: none !important;
+    padding: 10px 0;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.accordion-selection {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid lightgray;
+}
+
+.item-selected,
+.price {
+    font-size: 12px;
+    padding: 0 15px;
+    margin-bottom: 0;
+}
+
+.config-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.config-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.config-items:hover:not(.active) .hover-box {
+    opacity: 1;
+}
+
+.hover-box {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    box-shadow: 2px 2px 6px rgb(228, 227, 227);
+    border: 9px solid var(--theme-color);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.hover-box.active {
+    background: url('../asset/icons/tick-checked.png') no-repeat center center;
+    background-size: 500%;
+    border: none;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.config-items:has(.hover-box.active) p {
+    font-weight: 800;
+}
+
+.config-items p {
+    font-size: 10px;
+    text-align: center;
+}
+
+.config-items img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 2px 2px 6px rgb(221, 221, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.inside-headings {
+    font-size: 15px;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 10px 0;
+}
+
+.paragraph {
+    font-size: 12px;
+}
+
+#shape-types {
+    display: none;
+}
+
+.table-colors,
+.powder-coating {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.table-colors .config-items img,
+#legs-position-box .config-items img,
+#powder-coating-box .config-items img,
+#pauline-wingelaar-colours-box .config-items img {
+    width: 60px;
+    height: 60px;
+}
+
+.disable-items {
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+    opacity: 0.7;
+}
+
+.disable-items::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    right: 23px;
+    transform: translateY(-50%);
+    background-image: url('../asset/icons/unlock.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    filter: brightness(0.5);
+}
+
+.dimensions {
+    border-radius: 15px;
+    border: 1px solid var(--secondary-color);
+    background-color: white;
+    padding: 5px 15px;
+}
+
+.dimensions.active {
+    color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+}
+
+.dimensions:hover {
+    color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+}
+
+.summary-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: white;
+    box-shadow: 0px -2px 3px #00000033;
+    width: 100%;
+    flex-shrink: 0;
+    /* height: 10vh; */
+}
+
+.subtotal,
+.deposit,
+.remaining,
+.delivery-time {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.subtotal p,
+.deposit p,
+.remaining p,
+.delivery-time p {
+    font-size: 12px;
+}
+
+.grandtotal {
+    padding: 10px 30px;
+}
+.grandtotal p {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right
+}
+
+.submit-configuration {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-configuration .submit-buttons button {
+    padding: 15px;
+    border-radius: 30px;
+    margin: 0 5px;
+}
+
+#save-design {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+#add-to-cart {
+    background-color: var(--theme-color);
+    color: white;
+    border: none;
+}
+
+.toggleFullScreenBtns {
+    position: absolute;
+    top: 50%;
+    right: 34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 9;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+#exitFullScreen {
+    display: none;
+}

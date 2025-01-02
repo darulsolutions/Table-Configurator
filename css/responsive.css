@@ -1,0 +1,54 @@
+@media screen and (width <= 950px) {
+    .main {
+        grid-template-columns: auto;
+        grid-template-rows: 50% 50%;
+    }
+    .configuration-container {
+        height: 100%;
+        margin-right: unset; 
+        padding: 20px;
+    }
+     /* Instance */
+    .main.UI-hidden {
+        grid-template-columns: auto ;
+        grid-template-rows: 100%;
+    }
+    .toggleFullScreenBtns {
+        display: none;
+    }
+}
+@media screen and (width <= 650px) {
+    .configuration-container {
+        border-radius: unset;
+        margin-inline:  unset;   
+    } 
+    .subtotal, .deposit, .remaining, .delivery-time {
+        padding: 2px 10px;
+    }
+    .submit-configuration .submit-buttons button {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .config-items img {
+        height: 80px;
+        width: 80px;
+    }
+    .info {
+        padding: 0 5px !important;
+    }
+    .table-colors, .powder-coating {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .summary-box {
+        position: static;
+    }
+    .mainHdng {
+        padding: 10px 0 0 10px;
+    }
+    .toggleFullScreenBtns {
+        display: none;
+    }
+    .grandtotal {
+        padding: 0 30px;
+    }
+}
