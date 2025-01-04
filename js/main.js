@@ -1,6 +1,6 @@
-function sendPost(msg) {
+function sendMessage(message) {
   const app = document.getElementById("playcanvasApp");
-  app.contentWindow.postMessage(msg, "*");
+  app.contentWindow.postMessage(message, "*");
 }
 
 const shapePrices = {
@@ -845,10 +845,7 @@ document.querySelectorAll("#shapes-box .config-items").forEach((shapes) => {
     // Items to lock or disable
     const itemsToLock1 = ["Pebble", "Abu", "Dollop", "Leaf", "Olmo"];
     const itemsToLock2 = ["Oval", "Around", "Danish Oval", "Semicircle"];
-    const itemsToLock3 = [
-      "Table du Sud x <br> Studio Verbaan I",
-      "Table du Sud x <br> Studio Verbaan II",
-    ];
+    const itemsToLock3 = ["Table du Sud x <br> Studio Verbaan I", "Table du Sud x <br> Studio Verbaan II"];
     const itemsToLock4 = ["Half Oval"];
 
     document
@@ -981,7 +978,7 @@ document.querySelectorAll("#shapes-box .config-items").forEach((shapes) => {
         text.innerText.toLowerCase().replace(/\s+/g, "-") + "-base";
 
       if (sanitizedText === baseIds) {
-        base.style.display = "flex";
+        base.style.display = "grid";
       } else {
         base.style.display = "none";
       }
@@ -1145,14 +1142,12 @@ document.querySelectorAll("#edge-finishing .config-items").forEach((edge) => {
   });
 });
 
-document
-  .querySelectorAll("#corner-finishing .config-items")
-  .forEach((corner) => {
+document.querySelectorAll("#corner-finishing .config-items").forEach((corner) => {
     corner.addEventListener("click", () => {
       active(corner, ".hover-box");
       selectedText(corner, "#corner-finishing-selected");
     });
-  });
+});
 
 document.querySelectorAll("#brush .config-items").forEach((brush) => {
   brush.addEventListener("click", () => {
@@ -1168,41 +1163,33 @@ document.querySelectorAll("#powder-coating-box .config-items").forEach((pc) => {
   });
 });
 
-document
-  .querySelectorAll("#pauline-wingelaar-colours-box .config-items")
-  .forEach((pwc) => {
+document.querySelectorAll("#pauline-wingelaar-colours-box .config-items").forEach((pwc) => {
     pwc.addEventListener("click", () => {
       active(pwc, ".hover-box");
       selectedText(pwc, "#pauline-wingelaar-selected");
     });
-  });
+});
 
-document
-  .querySelectorAll("#legs-position-box .config-items")
-  .forEach((position) => {
+document.querySelectorAll("#legs-position-box .config-items").forEach((position) => {
     position.addEventListener("click", () => {
       active(position, ".hover-box");
       selectedText(position, "#legs-position-selected");
     });
-  });
+});
 
-document
-  .querySelectorAll("#material-finish .config-items")
-  .forEach((finish) => {
+document.querySelectorAll("#material-finish .config-items").forEach((finish) => {
     finish.addEventListener("click", () => {
       active(finish, ".hover-box");
       selectedText(finish, "#table-finish-selected");
     });
-  });
+});
 
-document
-  .querySelectorAll("#material-colors .config-items")
-  .forEach((colors) => {
+document.querySelectorAll("#material-colors .config-items").forEach((colors) => {
     colors.addEventListener("click", () => {
       active(colors, ".hover-box");
       selectedText(colors, "#table-color-selected");
     });
-  });
+});
 
 document.querySelector(".info").addEventListener("click", function () {
   if (this.getAttribute("aria-expanded") === "true") {
@@ -1231,6 +1218,7 @@ fullScreen.addEventListener("click", () => {
   exitFullScreen.style.display = "block";
   toggleFullScreenBtns.style.right = "50px";
 });
+
 exitFullScreen.addEventListener("click", () => {
   document.querySelector(".main").style.gridTemplateColumns = "65% 35%";
   fullScreen.style.display = "block";

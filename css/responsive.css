@@ -18,6 +18,9 @@
     }
 }
 @media screen and (width <= 650px) {
+    .config-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
     .configuration-container {
         border-radius: unset;
         margin-inline:  unset;   

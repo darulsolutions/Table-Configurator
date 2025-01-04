@@ -13,6 +13,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+p {
+    margin-bottom: 0 !important;
+}
 
 body {
     overflow: hidden;
@@ -104,8 +107,8 @@ body {
 }
 
 .config-box {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 20px 0;
 }
@@ -202,7 +205,6 @@ body {
     content: "";
     position: absolute;
     top: 35%;
-    right: 23px;
     transform: translateY(-50%);
     background-image: url('../asset/icons/unlock.png');
     background-size: 50px 50px;
@@ -259,7 +261,7 @@ body {
 }
 
 .grandtotal {
-    padding: 10px 30px;
+    padding: 5px 30px;
 }
 .grandtotal p {
     font-size: 18px;
