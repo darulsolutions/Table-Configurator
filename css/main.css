@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chango&family=Electrolize&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+@font-face {
+    font-family: SFPro;
+    src: url(../asset/fonts/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
 
 :root {
-    --theme-color: #e5b761;
+    --theme-color: #7e8b77;
     --secondary-color: rgb(228, 228, 228);
-    --theme-font: "Be Vietnam Pro", serif;
+    --theme-font: SFPro;
+
 }
 
 * {
@@ -28,6 +33,13 @@ body {
     align-items: center;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    position: relative;
+}
+.logo {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
 }
 
 .iframe-container {
@@ -55,8 +67,10 @@ body {
     max-height: 800px;
     height: 100%;
     overflow-y: auto;
-    /* height: 90vh; */
     transition: max-height 0.3s ease;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--theme-color) !important;
 }
 
 .accordion {
@@ -131,16 +145,19 @@ body {
     width: 25px;
     background-color: white;
     position: absolute;
-    right: 0;
+    right: 10px;
     box-shadow: 2px 2px 6px rgb(228, 227, 227);
     border: 9px solid var(--theme-color);
     opacity: 0;
     transition: opacity 0.2s linear;
 }
+.table-colors .hover-box, .powder-coating .hover-box, .legs-position .hover-box {
+    right: 0;
+}
 
 .hover-box.active {
     background: url('../asset/icons/tick-checked.png') no-repeat center center;
-    background-size: 500%;
+    background-size: cover;
     border: none;
     background-color: transparent;
     opacity: 1;
@@ -151,7 +168,7 @@ body {
 }
 
 .config-items p {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -181,7 +198,8 @@ body {
 }
 
 .table-colors,
-.powder-coating {
+.powder-coating,
+.legs-position {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
@@ -206,7 +224,7 @@ body {
     position: absolute;
     top: 35%;
     transform: translateY(-50%);
-    background-image: url('../asset/icons/unlock.png');
+    background-image: url('../asset/icons/lock.png');
     background-size: 50px 50px;
     background-repeat: no-repeat;
     width: 50px;

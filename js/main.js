@@ -845,7 +845,10 @@ document.querySelectorAll("#shapes-box .config-items").forEach((shapes) => {
     // Items to lock or disable
     const itemsToLock1 = ["Pebble", "Abu", "Dollop", "Leaf", "Olmo"];
     const itemsToLock2 = ["Oval", "Around", "Danish Oval", "Semicircle"];
-    const itemsToLock3 = ["Table du Sud x <br> Studio Verbaan I", "Table du Sud x <br> Studio Verbaan II"];
+    const itemsToLock3 = [
+      "Table du Sud x <br> Studio Verbaan I",
+      "Table du Sud x <br> Studio Verbaan II",
+    ];
     const itemsToLock4 = ["Half Oval"];
 
     document
@@ -974,8 +977,7 @@ document.querySelectorAll("#shapes-box .config-items").forEach((shapes) => {
     let baseOptions = document.querySelectorAll("#base-box .config-box");
     baseOptions.forEach((base) => {
       let baseIds = base.id;
-      let sanitizedText =
-        text.innerText.toLowerCase().replace(/\s+/g, "-") + "-base";
+      let sanitizedText = text.innerText.toLowerCase().replace(/\s+/g, "-") + "-base";
 
       if (sanitizedText === baseIds) {
         base.style.display = "grid";
@@ -986,10 +988,8 @@ document.querySelectorAll("#shapes-box .config-items").forEach((shapes) => {
 
     // Show finishing of selected shape
     const showCornerFinishSection = ["Rectangle", "Half Oval"];
-    const showStandardEdgeFinishing = [
-      "Rectangle",
-      "Table du Sud x <br> Studio Verbaan I",
-    ];
+    const showStandardEdgeFinishing = ["Rectangle", "Table du Sud x <br> Studio Verbaan I"];
+    
     let cornerFinishing = document.querySelector("#corner-finishing");
     let edgeFinishing = document.querySelectorAll(
       "#edge-finishing .config-items"
@@ -1070,13 +1070,14 @@ document.querySelectorAll("#material-box .config-items").forEach((material) => {
 
     let finishFound = false;
     let finishShown = false;
+    let colorShown = false;
     document.querySelectorAll(".table-finish").forEach((tableFinish) => {
       tableFinish.style.display = "none";
     });
 
     document.querySelectorAll(".table-finish").forEach((tableFinish) => {
       if (tableFinish.id.includes(sanitizedText)) {
-        tableFinish.style.display = "flex";
+        tableFinish.style.display = "grid";
         finishMaterial.style.display = "block";
         document.querySelector("#table-finish-selected").style.display =
           "inline";
@@ -1089,9 +1090,6 @@ document.querySelectorAll("#material-box .config-items").forEach((material) => {
           finishShown = true;
         }
       }
-      // else {
-      //   tableFinish.style.display = "none";
-      // }
 
       if (finishShown) {
         document.querySelector("#table-finish-selected").style.display =
@@ -1109,8 +1107,16 @@ document.querySelectorAll("#material-box .config-items").forEach((material) => {
         tableColors.style.display = "grid";
         colorMaterial.style.display = "block";
         colorsFound = true;
+        colorShown = true;
       } else {
         tableColors.style.display = "none";
+      }
+
+      if (colorShown) {
+        document.querySelector("#table-color-selected").style.display =
+          "inline";
+      } else {
+        document.querySelector("#table-color-selected").style.display = "none";
       }
     });
     if (!colorsFound) colorMaterial.style.display = "none";
@@ -1224,4 +1230,4 @@ exitFullScreen.addEventListener("click", () => {
   fullScreen.style.display = "block";
   exitFullScreen.style.display = "none";
   toggleFullScreenBtns.style.right = "34%";
-});
+}); 
