@@ -151,7 +151,7 @@ body {
     opacity: 0;
     transition: opacity 0.2s linear;
 }
-.table-colors .hover-box, .powder-coating .hover-box, .legs-position .hover-box {
+.table-colors .hover-box, .powder-coating .hover-box, .legs-position .hover-box, .pauline-wingelaar .hover-box {
     right: 0;
 }
 
@@ -199,7 +199,8 @@ body {
 
 .table-colors,
 .powder-coating,
-.legs-position {
+.legs-position,
+.pauline-wingelaar {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }

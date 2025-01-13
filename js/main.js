@@ -1,5 +1,5 @@
 function sendMessage(message) {
-  const app = document.getElementById("playcanvasApp");
+  const app = document.getElementById("app");
   app.contentWindow.postMessage(message, "*");
 }
 
@@ -354,9 +354,9 @@ function createDimensionButtons(selector, values) {
         container.appendChild(button);
 
         button.addEventListener("click", () => {
-          let text =
-            button.closest(".config-box").previousElementSibling.innerText;
+          let text = button.closest(".config-box").previousElementSibling.innerText;
           let id;
+          let message = text + " : " + button.innerText
 
           if (text == "Length") {
             id = "#length-selected";
@@ -372,13 +372,13 @@ function createDimensionButtons(selector, values) {
 
           active(button, ".dimensions");
           selectedText(button, id);
+          sendMessage(message)
         });
 
         if (index === 0) {
           button.classList.add("active");
 
-          let text =
-            button.closest(".config-box").previousElementSibling.innerText;
+          let text = button.closest(".config-box").previousElementSibling.innerText;
           let id;
 
           if (text == "Length") {
@@ -839,6 +839,7 @@ document.querySelectorAll("#shapes-box .config-items").forEach((shapes) => {
 
     let shapePrice = document.querySelector("#shape-price");
     let text = shapes.querySelector("p");
+    sendMessage(text.innerText)
 
     let types = document.querySelector("#shape-types");
 
@@ -1063,10 +1064,9 @@ document.querySelectorAll("#material-box .config-items").forEach((material) => {
     let text = material.querySelector("p");
     let finishMaterial = document.querySelector("#material-finish");
     let colorMaterial = document.querySelector("#material-colors");
-    let sanitizedText = text.innerText
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .trim();
+    let sanitizedText = text.innerText.toLowerCase().replace(/\s+/g, "-").trim();
+
+    sendMessage(text.innerText)
 
     let finishFound = false;
     let finishShown = false;
@@ -1125,75 +1125,95 @@ document.querySelectorAll("#material-box .config-items").forEach((material) => {
 
 document.querySelector("#shape-types").addEventListener("click", (event) => {
   const type = event.target.closest(".config-items");
+  const text = type.querySelector('p')
 
   if (type) {
     active(type, ".hover-box");
     selectedText(type, "#type-selected");
+    sendMessage(text.innerText)
   }
 });
 
 document.querySelectorAll("#base-box .config-items").forEach((base) => {
   base.addEventListener("click", (event) => {
+    let text = base.querySelector('p')
     active(base, ".hover-box");
     selectedText(base, "#base-selected");
     showLegsPosition(base);
     showColors(base);
+    sendMessage(text.innerText)
   });
 });
 
 document.querySelectorAll("#edge-finishing .config-items").forEach((edge) => {
   edge.addEventListener("click", () => {
+    let text = edge.querySelector('p')
     active(edge, ".hover-box");
     selectedText(edge, "#edge-finishing-selected");
+    sendMessage(text.innerText)
   });
 });
 
 document.querySelectorAll("#corner-finishing .config-items").forEach((corner) => {
     corner.addEventListener("click", () => {
+      let text = corner.querySelector('p')
       active(corner, ".hover-box");
       selectedText(corner, "#corner-finishing-selected");
+      sendMessage(text.innerText)
     });
 });
 
 document.querySelectorAll("#brush .config-items").forEach((brush) => {
   brush.addEventListener("click", () => {
+    let text = brush.querySelector('p')
     active(brush, ".hover-box");
     selectedText(brush, "#brush-selected");
+    sendMessage(text.innerText)
   });
 });
 
 document.querySelectorAll("#powder-coating-box .config-items").forEach((pc) => {
   pc.addEventListener("click", () => {
+    let text = pc.querySelector('p')
     active(pc, ".hover-box");
     selectedText(pc, "#powder-coating-selected");
+    sendMessage(text.innerText)
   });
 });
 
 document.querySelectorAll("#pauline-wingelaar-colours-box .config-items").forEach((pwc) => {
     pwc.addEventListener("click", () => {
+      let text = pwc.querySelector('p')
       active(pwc, ".hover-box");
       selectedText(pwc, "#pauline-wingelaar-selected");
+      sendMessage(text.innerText)
     });
 });
 
 document.querySelectorAll("#legs-position-box .config-items").forEach((position) => {
     position.addEventListener("click", () => {
+      let text = position.querySelector('p')
       active(position, ".hover-box");
       selectedText(position, "#legs-position-selected");
+      sendMessage(text.innerText)
     });
 });
 
 document.querySelectorAll("#material-finish .config-items").forEach((finish) => {
     finish.addEventListener("click", () => {
+      let text = finish.querySelector('p')
       active(finish, ".hover-box");
       selectedText(finish, "#table-finish-selected");
+      sendMessage(text.innerText)
     });
 });
 
 document.querySelectorAll("#material-colors .config-items").forEach((colors) => {
     colors.addEventListener("click", () => {
+      let text = colors.querySelector('p')
       active(colors, ".hover-box");
       selectedText(colors, "#table-color-selected");
+      sendMessage(text.innerText)
     });
 });
 
