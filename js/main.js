@@ -1,5 +1,6 @@
 function sendMessage(message) {
   const app = document.getElementById("app");
+  console.log(message)
   app.contentWindow.postMessage(message, "*");
 }
 
